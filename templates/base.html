@@ -19,26 +19,24 @@
                     <a class="nav-link active" aria-current= "page" href="/">Home</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{url_for("mostrarLenguajes)}}" >Acerca</a>
+                    <a class="nav-link" href="{{ url_for('mostrarLenguajes') }}">Lenguajes</a>
+
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Contacto</a>
+                    <a class="nav-link" href="{{ url_for('contacto') }}">Contacto</a>
                 </li>
-                <!-- Puedes añadir más elementos del menú aquí -->
             </ul>
         </div>
     </div>
 </nav>
 
-<!-- Contenido de la página -->
 <div class="container">
     {% block content %}
-    <!-- Este bloque será reemplazado por el contenido específico de cada página -->
+    
     {% endblock %}
 </div>
 
-<!-- Agrega tus scripts JavaScript aquí -->
-<script src="scripts.js"></script>
+
 
 </body>
 </html>
