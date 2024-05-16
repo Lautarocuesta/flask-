@@ -14,7 +14,9 @@ def principal():
 
 @app.route("/contacto")
 def contacto():
-    return "contactos"
+    
+     return ("Juan", "María", "Carlos", "Laura", "Pedro", "Ana", "Luis", "Sofía")
+     nombres = contacto()
 
 if __name__== '__main__':
     app.run(debug=True, port=5000)
