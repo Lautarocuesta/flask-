@@ -10,6 +10,7 @@ def principal():
 def contacto():
     nombres = ["Juan", "María", "Carlos", "Laura", "Pedro", "Ana", "Luis", "Sofía"]
     return render_template("contacto.html", nombres=nombres)
+
 @app.route("/bienvenida")
 def bienvenida():
     usuario = "Carlos"
@@ -19,6 +20,13 @@ def bienvenida():
         {"nombre": "Teclado", "precio": 45}
     ]
     return render_template("bienvenida.html", usuario=usuario, articulos=articulos)
+@app.route('/submit_contact', methods=['POST'])
+def submit_contact():
+    nombre = request.form['nombre']
+    email = request.form['email']
+    mensaje = request.form['mensaje']
+    # Aquí puedes procesar los datos del formulario (por ejemplo, guardarlos en una base de datos o enviar un correo electrónico)
+    return redirect(url_for('contacto'))
 
 
 if __name__ == '__main__':
