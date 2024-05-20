@@ -1,8 +1,13 @@
-{% extends "plantilla_base.html" %}
 
-{% block title %}contacto{% endblock %}
+
+{% block title %}Contacto{% endblock %}
 
 {% block body %}
 <img src="{{ url_for('static', filename='descarga.jpg') }}" alt="imagen de descarga" />
-<h1>Estamos en contacto</h1>
+<h1>Contacta en esta pagina</h1>
+<ul>
+    {% for nombre in nombres %}
+    <li>{{ nombre }}</li>
+    {% endfor %}
+</ul>
 {% endblock %}
